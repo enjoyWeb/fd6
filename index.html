@@ -5,163 +5,178 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>Foundation6</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/foundation-flex-grid.css" />
 </head>
 
 <body>
     <div class="row">
-        <div class="large-12 columns">
-            <h1>Welcome to Foundation for Sites 6</h1>
-        </div>
+        <h1>grid布局</h1>
     </div>
     <div class="row">
-        <div class="large-12 columns">
-            <div class="callout large">
-                <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-                <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-                <p>Once you've exhausted the fun in this document, you should check out:</p>
-                <div class="row">
-                    <div class="large-4 medium-4 columns">
-                        <p><a href="http://foundation.zurb.com/sites/docs/">Foundation Documentation</a>
-                            <br />Everything you need to know about using the framework.</p>
-                    </div>
-                    <div class="large-4 medium-4 columns">
-                        <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a>
-                            <br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-                    </div>
-                    <div class="large-4 medium-4 columns">
-                        <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a>
-                            <br />Join the Foundation community to ask a question or show off your knowlege.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-4 medium-4 medium-push-2 columns">
-                        <p><a href="http://github.com/zurb/foundation">Foundation on Github</a>
-                            <br />Latest code, issue reports, feature requests and more.</p>
-                    </div>
-                    <div class="large-4 medium-4 medium-pull-2 columns">
-                        <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a>
-                            <br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>small、medium、large大中小分辨率布局;</h2>
+        <h3>只写small时，medium和large默认继承small；</h3>
+        <h3>有写small和medium时，large默认继承medium；</h3>
+        <h3>只写medium或large时，small是不会继承他们；</h3>
     </div>
     <div class="row">
-        <div class="large-8 medium-8 columns">
-            <h5>Here&rsquo;s your basic grid:</h5>
-            <!-- Grid Example -->
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+      <div class="small-1 columns">1</div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns">2</div>
+      <div class="small-2 columns">2</div>
+      <div class="small-2 columns">2</div>
+      <div class="small-2 columns">2</div>
+      <div class="small-2 columns">2</div>
+      <div class="small-2 columns">2</div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">3</div>
+      <div class="small-3 columns">3</div>
+      <div class="small-3 columns">3</div>
+      <div class="small-3 columns">3</div>
+    </div>
+    <div class="row">
+      <div class="small-4 columns">4</div>
+      <div class="small-4 columns">4</div>
+      <div class="small-4 columns">4</div>
+    </div>
+    <div class="row">
+      <div class="small-6 columns">6</div>
+      <div class="small-6 columns">6</div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">12</div>
+    </div>
+    <div class="column row">无边距</div>
+    <div class="expanded row">row的max-width被覆盖</div>
+    <div class="row">
+      <div class="large-1 columns">1</div>
+      <div class="large-8 large-offset-3 columns">8, offset 3，当前列左边margin占3列</div>
+    </div>
+    <div class="row">
+      <div class="medium-3 columns">3</div>
+      <div class="medium-3 columns">3</div>
+      <div class="medium-3 columns">3，还剩3列未填完整，最后一列右飘</div>
+    </div>
+    <div class="row">
+      <div class="medium-3 columns">3</div>
+      <div class="medium-3 columns">3</div>
+      <div class="medium-3 columns end">3 end，最后一列加上end样式名，最后一列就不会右飘</div>
+    </div>
+    <div class="row medium-uncollapse large-collapse">
+      <div class="small-6 columns">
+        medium-uncollapse和large-collapse样式名，中屏下2列之间有边距，大屏下2列之间没有边距
+      </div>
+      <div class="small-6 columns">
+        medium-uncollapse和large-collapse样式名，中屏下2列之间有边距，大屏下2列之间没有边距
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-9 small-centered large-uncentered columns">9 centered,中小屏居中，大屏不居中</div>
+    </div>
+    <div class="row">
+      <div class="small-5 small-push-7 medium-7 medium-push-5 columns">7,被推到后面</div>
+      <div class="small-7 small-pull-5 medium-5 medium-pull-7 columns">5, last，被拉到前面</div>
+    </div>
+    <div class="row small-up-1 medium-up-2 large-up-4">
+      <div class="column">
+        使用small/medium/large-up-X对row进行布局，最大为8列。不像columns布局，只是对一行进行分配。这里的布局是可以直接换行。
+      </div>
+      <div class="column">
+        <img src="img/300x300.png" class="thumbnail" alt="">
+      </div>
+      <div class="column">
+        <img src="img/300x300.png" class="thumbnail" alt="">
+      </div>
+      <div class="column">
+        <img src="img/300x300.png" class="thumbnail" alt="">
+      </div>
+      <div class="column">
+        <img src="img/300x300.png" class="thumbnail" alt="">
+      </div>
+      <div class="column">
+        <img src="img/300x300.png" class="thumbnail" alt="">
+      </div>
+    </div>
+    <div class="row">
+        <h1>flex-grid布局</h1>
+        <h3>flex-grid布局只支持ie10+</h3>
+    </div>
+    <div class="row">
+        <div class="flex-grid">
             <div class="row">
-                <div class="large-12 columns">
-                    <div class="callout ">
-                        <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
-                    </div>
-                </div>
+              <div class="small-4 columns">4 columns</div>
+              <div class="columns">正常布局每列高度是根据内容自动撑开，而flex-grid布局，所有列的高度是一致的，没有写占几列样式的div会自动平分剩余的宽度</div>
+              <div class="columns">正常布局每列高度是根据内容自动撑开，而flex-grid布局，所有列的高度是一致的，没有写占几列样式的div会自动平分剩余的宽度</div>
+              <div class="columns">正常布局每列高度是根据内容自动撑开，而flex-grid布局，所有列的高度是一致的，没有写占几列样式的div会自动平分剩余的宽度</div>
             </div>
             <div class="row">
-                <div class="large-6 medium-6 columns">
-                    <div class="callout">
-                        <p>Six columns</p>
-                    </div>
-                </div>
-                <div class="large-6 medium-6 columns">
-                    <div class="callout">
-                        <p>Six columns</p>
-                    </div>
-                </div>
+              <div class="shrink columns">Shrink!Shrink!Shrink!Shrink!Shrink!Shrink!加上shrink样式名之后，宽度会自动撑开，不会拘束于平分比例，宽度会一直撑开，超过100%也会。Shrink!Shrink!Shrink!Shrink!Shrink!Shrink!</div>
+              <div class="columns">No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!No Shrink!</div>
             </div>
             <div class="row">
-                <div class="large-4 medium-4 small-4 columns">
-                    <div class="callout">
-                        <p>Four columns</p>
-                    </div>
-                </div>
-                <div class="large-4 medium-4 small-4 columns">
-                    <div class="callout">
-                        <p>Four columns</p>
-                    </div>
-                </div>
-                <div class="large-4 medium-4 small-4 columns">
-                    <div class="callout">
-                        <p>Four columns</p>
-                    </div>
-                </div>
+              <div class="small-12 large-expand columns">small-12小屏下12列,large-expand大屏下宽度恢复成自动平分宽度</div>
+              <div class="small-12 large-expand columns">small-12小屏下12列,large-expand大屏下宽度恢复成自动平分宽度</div>
+              <div class="small-12 large-expand columns">small-12小屏下12列,large-expand大屏下宽度恢复成自动平分宽度</div>
+              <div class="small-12 large-expand columns">small-12小屏下12列,large-expand大屏下宽度恢复成自动平分宽度</div>
+              <div class="small-12 large-expand columns">small-12小屏下12列,large-expand大屏下宽度恢复成自动平分宽度</div>
+              <div class="small-12 large-expand columns">small-12小屏下12列,large-expand大屏下宽度恢复成自动平分宽度</div>
             </div>
-            <hr />
-            <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-            <form>
-                <div class="row">
-                    <div class="large-12 columns">
-                        <label>Input Label</label>
-                        <input type="text" placeholder="large-12.columns" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-4 medium-4 columns">
-                        <label>Input Label</label>
-                        <input type="text" placeholder="large-4.columns" />
-                    </div>
-                    <div class="large-4 medium-4 columns">
-                        <label>Input Label</label>
-                        <input type="text" placeholder="large-4.columns" />
-                    </div>
-                    <div class="large-4 medium-4 columns">
-                        <label>Input Label</label>
-                        <div class="input-group">
-                            <input type="text" placeholder="small-9.columns" class="input-group-field" />
-                            <span class="input-group-label">.com</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-12 columns">
-                        <label>Select Box</label>
-                        <select>
-                            <option value="husker">Husker</option>
-                            <option value="starbuck">Starbuck</option>
-                            <option value="hotdog">Hot Dog</option>
-                            <option value="apollo">Apollo</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-6 medium-6 columns">
-                        <label>Choose Your Favorite</label>
-                        <input type="radio" name="pokemon" value="Red" id="pokemonRed">
-                        <label for="pokemonRed">Radio 1</label>
-                        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
-                        <label for="pokemonBlue">Radio 2</label>
-                    </div>
-                    <div class="large-6 medium-6 columns">
-                        <label>Check these out</label>
-                        <input id="checkbox1" type="checkbox">
-                        <label for="checkbox1">Checkbox 1</label>
-                        <input id="checkbox2" type="checkbox">
-                        <label for="checkbox2">Checkbox 2</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-12 columns">
-                        <label>Textarea Label</label>
-                        <textarea placeholder="small-12.columns"></textarea>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="large-4 medium-4 columns">
-            <h5>Try one of these buttons:</h5>
-            <p><a href="#" class="small button">Simple Button</a>
-                <br/>
-                <a href="#" class="medium success button">Success Button</a>
-                <br/>
-                <a href="#" class="medium alert button">Alert Button</a>
-                <br/>
-                <a href="#" class="medium secondary button">Secondary Button</a></p>
-            <div class="callout">
-                <h5>So many components, girl!</h5>
-                <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-                <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>
+            <div class="row medium-unstack">
+              <div class="columns">medium-unstack中屏开始不叠起来，即中屏开始按照比例显示</div>
+              <div class="columns">medium-unstack中屏开始不叠起来，即中屏开始按照比例显示</div>
+              <div class="columns">medium-unstack中屏开始不叠起来，即中屏开始按照比例显示</div>
+              <div class="columns">medium-unstack中屏开始不叠起来，即中屏开始按照比例显示</div>
+              <div class="columns">medium-unstack中屏开始不叠起来，即中屏开始按照比例显示</div>
+              <div class="columns">medium-unstack中屏开始不叠起来，即中屏开始按照比例显示</div>
+            </div>
+            <div class="row">
+              <div class="column small-4">flex-grid布局，默认所有列左飘</div>
+              <div class="column small-4">flex-grid布局，默认所有列左飘</div>
+            </div>
+            <div class="row align-right">
+              <div class="column small-4">align-right所有列右飘</div>
+              <div class="column small-4">align-right所有列右飘</div>
+            </div>
+            <div class="row align-center">
+              <div class="column small-4">align-center所有列一起居中对齐</div>
+              <div class="column small-4">align-center所有列一起居中对齐</div>
+            </div>
+            <div class="row align-justify">
+              <div class="column small-2">align-justify所有列从2边往中间对齐</div>
+              <div class="column small-2">align-justify所有列从2边往中间对齐</div>
+              <div class="column small-2">align-justify所有列从2边往中间对齐</div>
+              <div class="column small-2">align-justify所有列从2边往中间对齐</div>
+            </div>
+            <div class="row align-spaced">
+              <div class="column small-4">align-spaced所有列占完比例之后，所留的左右空白区域要一致</div>
+              <div class="column small-4">align-spaced所有列占完比例之后，所留的左右空白区域要一致</div>
+            </div>
+            <div class="row align-middle">
+              <div class="columns">align-middle所有的columns的div垂直居中。</div>
+              <div class="columns">align-middle所有的columns的div垂直居中。所有的columns的div垂直居中。所有的columns的div垂直居中。所有的columns的div垂直居中。所有的columns的div垂直居中。所有的columns的div垂直居中。所有的columns的div垂直居中。所有的columns的div垂直居中。</div>
+            </div>
+            <div class="row align-stretch">
+              <div class="columns">align-stretch所有的columns的div高度为最高那个div的高度。</div>
+              <div class="columns">align-stretch所有的columns的div高度为最高那个div的高度。所有的columns的div高度为最高那个div的高度。所有的columns的div高度为最高那个div的高度。所有的columns的div高度为最高那个div的高度。所有的columns的div高度为最高那个div的高度。所有的columns的div高度为最高那个div的高度。</div>
+            </div>
+            <div class="row">
+              <div class="column align-bottom">Align bottom居底对齐</div>
+              <div class="column align-middle">Align middle居中对齐</div>
+              <div class="column align-top">Align top居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。居顶对齐。</div>
             </div>
         </div>
     </div>
